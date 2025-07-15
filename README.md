@@ -6,7 +6,7 @@
 
 ## Sobre este repositório
 
-Este repositório contém a resolução das questões propostas na lista da disciplina **Cálculo Numérico**, cursada no período **2025.1** no curso de Engenharia Elétrica. O objetivo é registrar de forma clara, organizada e comentada as soluções dos exercícios, utilizando principalmente a linguagem **Python** e ferramentas computacionais como **NumPy** e **matplotlib**, sempre que necessário.
+Este repositório contém a resolução das questões propostas na lista da disciplina **Cálculo Numérico**, cursada no período **2025.1** no curso de Engenharia Elétrica. O objetivo é registrar as soluções dos exercícios, utilizando principalmente a linguagem **Python** e ferramentas computacionais como **NumPy** e **matplotlib**, sempre que necessário.
 
 ## Estrutura
 
