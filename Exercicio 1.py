@@ -1,4 +1,7 @@
+
 import numpy as np
+
+
 #Considere duas matrizes quadradas F[i, j] e G[i, j], onde
 #i, j ∈ {1,2,...,n}. Crie duas matrizes F e G de ordem n×n,
 #preenchidas com números aleatórios gerados por uma distri-
