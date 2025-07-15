@@ -28,5 +28,3 @@ for i in range(n):
 DamF = soma_DAMF / (n ** 2)
 DamG = soma_DAMG / (n ** 2)
 
-print(DamF)
-print(DamG)
