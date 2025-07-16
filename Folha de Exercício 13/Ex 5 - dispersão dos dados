@@ -1,0 +1,25 @@
+import numpy as np
+def variancia(F,n,m)
+    desvio = 0 
+    sumF = 0 
+    
+    for i in range (0,n,1):
+        for j in range (0,m,1):
+            sumF += (F[i,j])
+    uF = (1/n**2)*sumF
+
+    for i in range (0,n,1):
+        for j in range (0,m,1):
+            desvio += (F[i,j] - uF)**2
+    
+    desvio_linha 
+    
+    
+
+    
+
+    
+n = int(input('Digite o n de linhas: '))
+m = int(input('Digite o n de colunas: '))
+np.random.seed(10)
+F = np.random.rand(n, m)

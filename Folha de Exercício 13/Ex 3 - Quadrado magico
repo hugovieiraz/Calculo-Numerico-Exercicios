@@ -1,0 +1,75 @@
+def eh_quadrado_magico(matriz):
+   
+    if not matriz:
+        return False
+    
+    n = len(matriz) # Ordem da matriz (número de linhas)
+    
+    # 1. Calcula a "soma mágica" de referência usando a primeira linha
+    soma_referencia = sum(matriz[0])
+
+    # 2. Verifica a soma de todas as outras linhas
+    for i in range(1, n):
+        if sum(matriz[i]) != soma_referencia:
+            return False # Se qualquer linha for diferente, já não é mágico
+
+    # 3. Verifica a soma de todas as colunas
+    for j in range(n):
+        soma_coluna = 0
+        for i in range(n):
+            soma_coluna += matriz[i][j]
+        
+        if soma_coluna != soma_referencia:
+            return False # Se qualquer coluna for diferente, não é mágico
+
+    # 4. Verifica a soma da diagonal principal (canto superior esquerdo ao inferior direito)
+    soma_diag_principal = 0
+    for i in range(n):
+        soma_diag_principal += matriz[i][i]
+    
+    if soma_diag_principal != soma_referencia:
+        return False
+
+    # 5. Verifica a soma da diagonal secundária (canto superior direito ao inferior esquerdo)
+    soma_diag_secundaria = 0
+    for i in range(n):
+        soma_diag_secundaria += matriz[i][n - 1 - i]
+
+    if soma_diag_secundaria != soma_referencia:
+        return False
+
+    # Se todas as verificações passaram, então é um quadrado mágico!
+    return True
+
+# --- Exemplos de Uso ---
+
+# Exemplo 1: O quadrado mágico fornecido na imagem
+quadrado1 = [
+    [17, 24,  1,  8, 15],
+    [23,  5,  7, 14, 16],
+    [ 4,  6, 13, 20, 22],
+    [10, 12, 19, 21,  3],
+    [11, 18, 25,  2,  9]
+]
+
+print("Verificando o primeiro exemplo (da imagem):")
+if eh_quadrado_magico(quadrado1):
+    print("É um quadrado mágico!")
+    print(f"A soma mágica é: {sum(quadrado1[0])}")
+else:
+    print("Não é um quadrado mágico.")
+
+print("\n" + "="*30 + "\n")
+
+# Exemplo 2: Uma matriz que NÃO é um quadrado mágico
+quadrado2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print("Verificando o segundo exemplo:")
+if eh_quadrado_magico(quadrado2):
+    print("É um quadrado mágico!")
+else:
+    print("Não é um quadrado mágico.")
