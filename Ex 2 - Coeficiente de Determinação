@@ -1,0 +1,22 @@
+import numpy as np 
+
+n = 3
+np.random.seed(10)
+F = np.random.rand(n, n)
+G = np.random.rand(n, n)
+
+uF = np.mean(F)
+uG = np.mean(G)
+
+numerador = 0
+denF = 0
+denG = 0
+
+for i in range(n):
+    for j in range(n):
+        numerador += (F[i, j] - uF) * (G[i, j] - uG)
+        denF += (F[i, j] - uF) ** 2
+        denG += (G[i, j] - uG) ** 2
+
+coef = numerador / (np.sqrt(denF) * np.sqrt(denG))
+print(f"Coeficiente de correlação: {coef:.4f}")
