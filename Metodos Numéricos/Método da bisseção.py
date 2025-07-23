@@ -1,3 +1,4 @@
+#metodo da bisseção
 import numpy as np 
 xa = 0
 xb = 1
